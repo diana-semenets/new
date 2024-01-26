@@ -3,9 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/swiper-bundle.min.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" href="img/">
+        <link rel="shortcut icon" href="">
         <title></title>
     </head>
 <body>
@@ -16,12 +15,15 @@
                     <p class="header__btn-date">14 февраля</p>
                     <a href="#" class="header__btn-start">Старт марафона</a>
                 </div>
+                <div class="header__social">
+                    <a href="#" target="_blank"><img src="img/telegram.png" alt="telegram"></a>
+                    <a href="#" target="_blank"><img src="img/whatsapp.png" alt="whatsapp"></a>
+                </div>
             </div>
         </header>
         <main class="main">
             <div class="main__container">
                 <section class="hero">
-                    <div class="hero-bg"></div>
                     <div class="hero__box">
                         <div class="hero__content">
                             <h1 class="hero-title">Работаешь на износ, а денег всё равно не хватает?</h1>
@@ -32,21 +34,9 @@
                                     Это научный, твердый метод.</p>
                             </div>
                           
-                            <button class="hero-btn">Принять участие</button>
+                            <button class="hero-btn" data-modal>Принять участие</button>
                         </div>
-                        <div class="hero__insta">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
-                                <path d="M5.68188 0.936035C2.78763 0.936035 0.43335 3.42341 0.43335 6.47925V14.3959C0.43335 17.451 2.78981 19.936 5.68481 19.936H13.1848C16.0791 19.936 18.4333 17.4487 18.4333 14.3928V6.47616C18.4333 3.42111 16.0769 0.936035 13.1819 0.936035H5.68188ZM14.6833 4.1027C15.0973 4.1027 15.4333 4.45737 15.4333 4.89437C15.4333 5.33137 15.0973 5.68604 14.6833 5.68604C14.2694 5.68604 13.9333 5.33137 13.9333 4.89437C13.9333 4.45737 14.2694 4.1027 14.6833 4.1027ZM9.43335 5.68604C11.9151 5.68604 13.9333 7.81641 13.9333 10.436C13.9333 13.0557 11.9151 15.186 9.43335 15.186C6.9516 15.186 4.93335 13.0557 4.93335 10.436C4.93335 7.81641 6.9516 5.68604 9.43335 5.68604ZM9.43335 7.26937C8.6377 7.26937 7.87464 7.603 7.31203 8.19686C6.74942 8.79073 6.43335 9.59618 6.43335 10.436C6.43335 11.2759 6.74942 12.0813 7.31203 12.6752C7.87464 13.2691 8.6377 13.6027 9.43335 13.6027C10.229 13.6027 10.9921 13.2691 11.5547 12.6752C12.1173 12.0813 12.4333 11.2759 12.4333 10.436C12.4333 9.59618 12.1173 8.79073 11.5547 8.19686C10.9921 7.603 10.229 7.26937 9.43335 7.26937Z" fill="url(#paint0_radial_26_7)"/>
-                                <defs>
-                                <radialGradient id="paint0_radial_26_7" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1.31756 5.41169) rotate(40.8277) scale(31.4567 224.907)">
-                                <stop stop-color="#DF006E"/>
-                                <stop offset="0.313686" stop-color="#DE056F"/>
-                                <stop offset="0.666667" stop-color="#FF1F8D" stop-opacity="0.63"/>
-                                </radialGradient>
-                                </defs>
-                                </svg>
-                                <span> nastyaumka</span>
-                           </div>
+                       
                         <div class="hero__img"><img src="img/businessman-3950117_1280.png" alt="марафон"></div>
                     </div>
                 </section>
@@ -121,7 +111,7 @@
                                         <div class="price-all">Цена: <span class="price"> 3400 грн</span><div class="discont">скидка 90%</div></div>
                                         <div class="sale-price">340 грн</div>
                                     </div>
-                                    <button class="hero-btn result__btn">Принять участие</button>
+                                    <button class="hero-btn result__btn">Оплатить</button>
                                 </div>
                             </div>
                             
@@ -135,5 +125,20 @@
         <footer class="footer"></footer>
     </div>
     
+    <div class="modal">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <form action="#">
+                    <div data-close class="modal__close">&times;</div>
+                    <div class="modal__title">Оставьте свои данные и мы обязательно свяжемся с Вами</div>
+                    <input required placeholder="Имя*" name="name" type="text" class="modal__input">
+                    <input required placeholder="Номер телефона*" name="phone" type="phone" class="modal__input">
+                    <button class="btn btn_dark btn_min">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
