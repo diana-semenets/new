@@ -696,7 +696,13 @@ h2.hero-title {
         font-size: 28px;
     }
     .marathon__item-img {
-        max-width: 40px;
+        width: 40px;
+    }
+    .marathon__item-img img {
+        width: 40px;
+      }
+      .marathon__item p {
+        line-height: 22px;
       }
 }
 @media (max-width:700px) {
@@ -825,6 +831,7 @@ h2.hero-title {
 @media (max-width:450px) {
     .marathon__item p {
         font-size: 16px;
+        line-height: 18px;
     }
     .marathon__items {
         column-gap: 5px;
@@ -861,6 +868,9 @@ h2.hero-title {
     .result__info {
         max-width: 370px;
     }
+    .marathon__item-img img {
+        width: 30px;
+      }
 }
 @media (max-width:400px) {
     .marathon__item-img {
@@ -868,9 +878,6 @@ h2.hero-title {
     }
     .result {
         margin-top: 50px;
-    }
-      .marathon__item p {
-        line-height: 19px;
     }
     .marathon__container {
         padding: 0 10px 30px;
