@@ -860,6 +860,7 @@ h2.hero-title {
 @media (max-width:500px) {
     .hero__img img {
         width: 85%;
+        opacity: 0.4;
     }
 
     .title {
