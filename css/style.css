@@ -635,6 +635,22 @@ h2.hero-title {
     outline: none;
     border-radius: 4px;
   }
+ .input-text {
+    display: block;
+    margin: 20px auto 20px auto;
+    width: 300px;
+    height: 40px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 5px -1px 8px 1px rgba(165, 162, 51, 0.54);
+    -moz-box-shadow: 5px -1px 8px 1px rgba(165, 162, 51, 0.54);
+    box-shadow: 5px -1px 8px 1px rgba(165, 162, 51, 0.54);
+    border: none;
+    font-family: inherit;
+    font-size: 18px;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 4px;
+  }
   .modal .btn {
     height: 40px;
     display: block;
@@ -648,6 +664,39 @@ h2.hero-title {
     font-size: 16px;
     cursor: pointer;
   }
+.modal__card-title {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 22px;
+    background: -webkit-linear-gradient(45deg, rgb(46, 63, 186) 46%, rgb(202, 235, 236));
+    background: -moz-linear-gradient(45deg, rgb(46, 63, 186) 46%, rgb(202, 235, 236));
+    background: linear-gradient(45deg, rgb(46, 63, 186) 46%, rgb(202, 235, 236));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+.modal__card-number {
+    margin-top: 20px;
+}
+
+.modal__card p {    
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+}
+.modal__card p:last-child {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 20px;
+}
+.modal__faq-title {
+    margin-bottom: 10px;
+}
+.modal__faq {
+    margin-top: 40px;
+    text-align: center;
+}
 
 @media (max-width:1500px) {
     .hero__img {
@@ -953,7 +1002,7 @@ h2.hero-title {
     .modal__dialog {
         max-width: 350px;
     }
-    .modal__input {
+    .modal__input, .input-text {
         width: 250px;
     }
 }

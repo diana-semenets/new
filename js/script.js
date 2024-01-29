@@ -48,3 +48,61 @@ function onEntry(entry) {
   for (let elm of elements) {
     observer.observe(elm);
   }
+
+//---------------------form
+
+const form = document.querySelector('form'),
+inputs = document.querySelectorAll('input');
+
+
+const message = {
+loading: 'Отправляем...',
+success: 'Отправлено',
+failure: 'Ошибка отправки'
+};
+
+const postData = async (url, data) => {
+document.querySelector('.status').textContent = message.loading;
+let res = await fetch(url, {
+    method: "POST",
+    body: data
+});
+
+return await res.text();
+};
+
+const clearInputs = () => {
+inputs.forEach(item => {
+    item.value = '';
+});
+};
+
+
+
+  form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      let statusMessage = document.createElement('div');
+      statusMessage.classList.add('status');
+      form.appendChild(statusMessage);
+
+      const formData = new FormData(form);
+
+      postData('sendmail/sendmail.php', formData)
+          .then(res => {
+              console.log(res);
+              closeMode();
+          })
+          .catch(() => 
+          statusMessage.textContent = message.failure)
+          .finally(() => {
+              clearInputs();
+              setTimeout(() => {
+                  statusMessage.remove();
+              }, 5000);
+          });
+  });
+  
+
+
+  

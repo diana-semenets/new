@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" href="">
+        <link rel="shortcut icon" href="img/favicon.ico">
         <meta name="description" content="Марафон 'Активация денежных потоков'">
         <title>Активация денежных потоков</title>
     </head>
@@ -17,7 +17,7 @@
                     <a href="#" class="header__btn-start" data-modal>Старт марафона</a>
                 </div>
                 <div class="header__social">
-                    <a href="#" target="_blank"><img src="img/telegram.webp" alt="telegram"></a>
+                    <a href="https://t.me/xeniakarpi" target="_blank"><img src="img/telegram.webp" alt="telegram"></a>
                     <a href="#" target="_blank"><img src="img/whatsapp.webp" alt="whatsapp"></a>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                                 <div class="result__btns">
                                     <div class="result__btns-price">
                                         <div class="price-all">Цена: <span class="price"> 3400 грн</span><div class="discont">скидка 90%</div></div>
-                                        <div class="sale-price">340 грн</div>
+                                        <div class="sale-price"></div>
                                     </div>
                                     <button class="hero-btn result__btn">Оплатить</button>
                                 </div>
@@ -128,17 +128,36 @@
     <div class="modal">
         <div class="modal__dialog">
             <div class="modal__content">
-                <form action="#">
+                <form action="sendmail/sendmail.php" method="POST" enctype="multipart/form-data">
                     <div data-close class="modal__close">&times;</div>
                     <div class="modal__title">Оставьте свои данные и мы обязательно свяжемся с Вами</div>
-                    <input required placeholder="Имя*" name="name" type="text" class="modal__input">
-                    <input required placeholder="Номер телефона*" name="phone" type="phone" class="modal__input">
+                    <input required placeholder="Ваше имя*" name="name" type="text" class="modal__input">
+                    <input required placeholder="Ваш email*" name="email" type="email" pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$" class="modal__input">
+                    <input required placeholder="Ваш телеграм*" name="tel" type="text" class="modal__input">
+                    <input name="text"  placeholder="Ваше сообщение (не обязательно)" class="input-text">
                     <button class="btn btn_dark btn_min">Отправить</button>
                 </form>
+
+                <div class="modal__card">
+                    <h4 class="modal__card-title">Оплатить можна на карту Монобанк</h4>
+                    <div class="modal__card-number">
+                        <p class="card-number"></p>
+                        <p class="card-name"></p>
+                    </div>                    
+                </div>
+                <div class="modal__faq">
+                    <h4 class="modal__faq-title">Остались вопросы?</h4>
+                    <div class="header__social">
+                        <a href="https://t.me/xeniakarpi" target="_blank"><img src="img/telegram.webp" alt="telegram"></a>
+                        <a href="#" target="_blank"><img src="img/whatsapp.webp" alt="whatsapp"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+
     <script src="js/script.js"></script>
+    <script src="js/info.js"></script>
 </body>
 </html>
